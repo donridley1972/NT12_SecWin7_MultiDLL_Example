@@ -1,0 +1,139 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{45C87D38-2BC8-405A-AD77-3A5C826E535F}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Win32</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>MultiDLLDemo</RootNamespace>
+    <AssemblyName>MultiDLLDemo</AssemblyName>
+    <OutputName>MultiDLLDemo</OutputName>
+    <CWOutputType>Exe</CWOutputType>
+    <DefineConstants>_NT10_=&gt;1%3b_NT11_=&gt;1%3b_NT12_=&gt;1%3b_NT_=&gt;1%3bNETTALKLOG=&gt;1%3bStringTheoryLinkMode=&gt;0%3bStringTheoryDllMode=&gt;1%3bMyTableLinkMode=&gt;0%3bMyTableDllMode=&gt;1%3bjFilesLinkMode=&gt;0%3bjFilesDllMode=&gt;1%3b_JFILES_=&gt;1%3bSecwinLM=&gt;0%3bSecwinDM=&gt;1%3bCryptoniteLinkMode=&gt;0%3bCryptoniteDllMode=&gt;1%3b_CRYPTONITE_=&gt;1%3b_CRYPTOINI_=&gt;1%3b_ABCDllMode_=&gt;1%3b_ABCLinkMode_=&gt;0%3b_NetTalkDllMode_=&gt;1%3b_NetTalkLinkMode_=&gt;0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <vid>full</vid>
+    <check_stack>True</check_stack>
+    <check_index>True</check_index>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <vid>off</vid>
+    <check_stack>False</check_stack>
+    <check_index>False</check_index>
+  </PropertyGroup>
+  <ItemGroup>
+    <Library Include="clanet.lib" />
+    <Library Include="WebProcedures.lib" />
+    <FileDriver Include="DOS" />
+    <FileDriver Include="TOPSPEED" />
+    <Compile Include="MultiDLLDemo.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo001.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo002.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo003.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo004.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo005.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo006.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo007.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo008.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo009.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo010.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo011.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo012.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo013.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo014.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo015.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo016.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo017.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo018.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo019.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo020.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <Compile Include="MultiDLLDemo_nw.clw">
+      <Generated>true</Generated>
+    </Compile>
+    <ProjectReference Include="Data.cwproj">
+      <Project>{AF10040C-9F0D-4432-A213-6939509902AB}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <None Include="caroot.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="CommonPasswords.Txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="dh2048.pem">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="libcrypto-1_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="libssl-1_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="OpenSSL.Exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+    <None Include="zlibwapi.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Generated>True</Generated>
+      <ProjectGenerated>True</ProjectGenerated>
+    </None>
+  </ItemGroup>
+  <Import Project="$(ClarionBinPath)\SoftVelocity.Build.Clarion.targets" />
+</Project>
